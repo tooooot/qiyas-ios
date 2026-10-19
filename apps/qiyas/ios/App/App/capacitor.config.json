@@ -1,0 +1,48 @@
+{
+	"appId": "net.wardyat.qiyas",
+	"appName": "قياس",
+	"webDir": "www",
+	"server": {
+		"url": "https://qiyas.wardyat.net/app3/?c=store",
+		"errorPath": "offline.html",
+		"allowNavigation": [
+			"qiyas.wardyat.net"
+		]
+	},
+	"android": {
+		"includePlugins": [
+			"@capgo/native-purchases",
+			"@capgo/capacitor-social-login",
+			"@capacitor/local-notifications"
+		]
+	},
+	"plugins": {
+		"SocialLogin": {
+			"providers": {
+				"google": true,
+				"facebook": false,
+				"apple": true,
+				"twitter": false
+			}
+		},
+		"LocalNotifications": {
+			"smallIcon": "ic_stat_qiyas",
+			"iconColor": "#22386B"
+		}
+	},
+	"backgroundColor": "#f3e5bd",
+	"ios": {
+		"includePlugins": [
+			"@capgo/native-purchases",
+			"@capgo/capacitor-social-login",
+			"@capacitor/local-notifications"
+		],
+		"contentInset": "always",
+		"backgroundColor": "#f3e5bd"
+	},
+	"packageClassList": [
+		"NativePurchasesPlugin",
+		"SocialLoginPlugin",
+		"LocalNotificationsPlugin"
+	]
+}
